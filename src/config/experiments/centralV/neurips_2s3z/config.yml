@@ -1,0 +1,58 @@
+defaults: default centralV sc2
+batch_size: 8
+batch_size_run: 8
+coma_critic_sample_size: 800
+coma_critic_use_sampling: True
+coma_epsilon_decay_mode: linear
+coma_epsilon_finish: 0.01
+coma_epsilon_start: 0.5
+coma_epsilon_time_length: 50000
+coma_exploration_mode: softmax
+debug_mode: None
+debug_verbose: False
+env: sc2
+env_stats_aggregator: sc2
+env_args:
+  difficulty: "3"
+  episode_limit: 60
+  heuristic_function: False
+  measure_fps: True
+  move_amount: 5
+  reward_death_value: 10
+  reward_negative_scale: 0.5
+  reward_only_positive: True
+  reward_scale: True
+  reward_scale_rate: 20
+  reward_win: 200
+  state_last_action: True
+  step_mul: 8
+  map_name: 2s_3z
+  fully_observable: False
+gamma: 0.99
+lr_agent: 0.0005
+lr_critic: 0.0005
+mongodb_profile: gandalf_fastmarl
+multiagent_controller: coma_mac
+n_critic_learner_reps: 60
+n_loops_per_thread_or_sub_or_main_process: 1
+n_subprocesses: 8
+n_threads_per_subprocess_or_main_process: 0
+obs_last_action: True
+observe: True
+observe_db: True
+run_mode: sequential
+runner: coma
+runner_test_batch_size: 32
+save_model: False
+save_model_interval: 10e6
+share_agent_params: True
+t_max: 10000000
+target_critic_update_interval: 200
+td_lambda: 0.8
+tensorboard: False
+test_interval: 2000
+test_nepisode: 30
+use_cuda: True
+use_replay_buffer: False
+use_tensorboard: False
+critic_is_recurrent: False

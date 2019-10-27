@@ -1,0 +1,31 @@
+agents_encoder_size: 64
+agents_hidden_state_size: 64
+debug_mode:
+debug_verbose: False
+mongodb_profile: gandalf_fastmarl
+n_loops_per_thread_or_sub_or_main_process: 0
+n_threads_per_subprocess_or_main_process: 0
+n_subprocesses: 0
+observe: True
+observe_db: True
+run_mode: sequential
+save_model: False
+save_model_interval: 100000
+tensorboard: True
+test_interval: 8000
+test_nepisode: 50
+use_tensorboard: True
+t_max: 100000000
+use_cuda: True
+share_agent_params: True
+save_episode_samples: False
+use_hdf_logger: False
+critic_is_recurrent: False
+observe_file: False
+pair_partition_max_iter: ~
+pair_partition_shuffle: ~
+
+
+
+
+

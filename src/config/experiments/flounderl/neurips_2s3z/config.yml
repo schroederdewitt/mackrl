@@ -1,0 +1,92 @@
+action_selector: multinomial
+agent_model: mackrl_recursive
+agent_output_type: policies
+agent_share_params: True
+agents_encoder_size: 64
+agents_hidden_state_size: 64
+batch_size: 8
+batch_size_run: 8
+critic_share_params: True
+debug_mode: ~
+debug_verbose: False
+defaults: default mackrl sc2
+env: sc2
+env_args:
+  difficulty: "3"
+  episode_limit: 60
+  fully_observable: False
+  heuristic_function: False
+  intersection_global_view: False
+  map_name: 2s3z
+  measure_fps: True
+  move_amount: 5
+  relax_pairwise_aa: False
+  reward_damage_coef: 1.0
+  reward_death_value: 10
+  reward_negative_scale: 0.5
+  reward_only_positive: True
+  reward_scale: True
+  reward_scale_rate: 20
+  reward_win: 200
+  state_last_action: True
+  step_mul: 8
+env_stats_aggregator: sc2
+mackrl_agent_model: mackrl_agent
+mackrl_agent_use_past_actions: True
+mackrl_always_delegate: False
+mackrl_critic: mackrl_critic
+mackrl_delegate_if_zero_ck: True
+mackrl_delegation_probability_bias: 0.0
+mackrl_entropy_loss_regularization_factor: 0.000005
+mackrl_epsilon_decay_mode_level1: "exp"
+mackrl_epsilon_decay_mode_level2: "linear"
+mackrl_epsilon_decay_mode_level3: "linear"
+mackrl_epsilon_finish_level1: 0.01
+mackrl_epsilon_finish_level2: 0.01
+mackrl_epsilon_finish_level3: 0.01
+mackrl_epsilon_start_level1: 0.5
+mackrl_epsilon_start_level2: 0.5
+mackrl_epsilon_start_level3: 0.5
+mackrl_epsilon_time_length_level1: 50000
+mackrl_epsilon_time_length_level2: 50000
+mackrl_epsilon_time_length_level3: 50000
+mackrl_exploration_mode_level1: ~
+mackrl_exploration_mode_level2: "softmax"
+mackrl_exploration_mode_level3: "softmax"
+mackrl_fix_level1_pair: False
+mackrl_use_entropy_regularizer: False
+mackrl_use_obs_intersections: True
+gamma: 0.99
+learner: mackrl
+lr_agent: 0.0005
+lr_critic: 0.0005
+mongodb_profile: gandalf_fastmarl
+multiagent_controller: mackrl_mac
+n_critic_learner_reps: 60
+n_loops_per_thread_or_sub_or_main_process: 1
+n_pair_samples: 1
+n_step_return_n: 1
+n_subprocesses: 8
+obs_last_action: True
+observe: True
+observe_db: True
+run_mode: sequential
+runner: mackrl
+save_episode_samples: False
+save_model: False
+save_model_interval: 100000
+share_agent_params: True
+t_max: 100000000
+target_critic_update_interval: 200
+td_lambda: 0.8
+test_interval: 8000
+test_nepisode: 30
+use_cuda: True
+use_hdf_logger: False
+use_replay_buffer: False
+use_tensorboard: False
+
+
+
+
+
